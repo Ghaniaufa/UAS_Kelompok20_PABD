@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace UAS_Kelompok20_PABD
 {
-    public partial class Form1 : Form
+    public partial class Data_Peminjam : Form
     {
-        public Form1()
+        public Data_Peminjam()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void masukanDataToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
