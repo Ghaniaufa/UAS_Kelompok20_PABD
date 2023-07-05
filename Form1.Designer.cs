@@ -36,6 +36,7 @@
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.masukanDataFilmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataKelompokFilmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.masukanDataPegawaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +71,8 @@
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.masukanDataFilmToolStripMenuItem,
-            this.dataKelompokFilmToolStripMenuItem});
+            this.dataKelompokFilmToolStripMenuItem,
+            this.masukanDataPegawaiToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -80,14 +82,20 @@
             // masukanDataFilmToolStripMenuItem
             // 
             this.masukanDataFilmToolStripMenuItem.Name = "masukanDataFilmToolStripMenuItem";
-            this.masukanDataFilmToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.masukanDataFilmToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.masukanDataFilmToolStripMenuItem.Text = "Masukan Data Film";
             // 
             // dataKelompokFilmToolStripMenuItem
             // 
             this.dataKelompokFilmToolStripMenuItem.Name = "dataKelompokFilmToolStripMenuItem";
-            this.dataKelompokFilmToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.dataKelompokFilmToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.dataKelompokFilmToolStripMenuItem.Text = "Data Kelompok Film";
+            // 
+            // masukanDataPegawaiToolStripMenuItem
+            // 
+            this.masukanDataPegawaiToolStripMenuItem.Name = "masukanDataPegawaiToolStripMenuItem";
+            this.masukanDataPegawaiToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.masukanDataPegawaiToolStripMenuItem.Text = "Masukan Data Pegawai";
             // 
             // Form1
             // 
@@ -113,6 +121,7 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem masukanDataFilmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataKelompokFilmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem masukanDataPegawaiToolStripMenuItem;
     }
 }
 
