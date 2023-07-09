@@ -19,7 +19,7 @@ namespace UAS_Kelompok20_PABD
     public partial class Kelompok_Film : Form
     {
 
-        private string stringConnection = "Data Source=GHANIAUFA\\GHANAUFA;Initial Catalog=TokoDVDFilm;User ID=sa;Password=Anjingan20";
+        private string stringConnection = "Data Source=GHANIAUFA;Initial Catalog=TokoDVDFilm;Persist Security Info=True;User ID=sa;Password=Anjingan20";
         private SqlConnection koneksi;
         private void refreshform()
         {
@@ -39,6 +39,17 @@ namespace UAS_Kelompok20_PABD
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
             refreshform();
+            dataGridView();
+        }
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "select * from dbo.Kelompok_film";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
         }
 
         private void Kelompok_Film_Load(object sender, EventArgs e)
@@ -66,7 +77,7 @@ namespace UAS_Kelompok20_PABD
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.Kelompok_film (jenis_film,harga_sewa,no_film,kode_film)" + "values(@jenis_film,@haga_sewa,@no_film,@kode_film)";
+                string str = "insert into dbo.Kelompok_film (jenis_film,harga_sewa,no_film,kode_film)" + "values(@jenis_film,@harga_sewa,@no_film,@kode_film)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("jenis_film", jenisFilm));
@@ -78,6 +89,7 @@ namespace UAS_Kelompok20_PABD
                 koneksi.Close();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refreshform();
+                dataGridView();
             }
         }
         private void Data_Peminjam_FormClosed(object sender, FormClosedEventArgs e)
@@ -85,6 +97,35 @@ namespace UAS_Kelompok20_PABD
             Form1 fu = new Form1();
             fu.Show();
             this.Hide();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string str = "DELETE FROM Kelompok_film WHERE no_film = @no_film";
+
+            using (SqlConnection conn = new SqlConnection(stringConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand(str, conn))
+                {
+                    cmd.Parameters.AddWithValue("@no_film", tbxDelete.Text);
+
+                    try
+                    {
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data Berhasil Dihapus");
+                        dataGridView();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                }
+            }
         }
     }
 }

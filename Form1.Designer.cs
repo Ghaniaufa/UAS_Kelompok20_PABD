@@ -80,6 +80,7 @@
             this.kelompokFilmToolStripMenuItem.Name = "kelompokFilmToolStripMenuItem";
             this.kelompokFilmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kelompokFilmToolStripMenuItem.Text = "Kelompok Film";
+            this.kelompokFilmToolStripMenuItem.Click += new System.EventHandler(this.kelompokFilmToolStripMenuItem_Click);
             // 
             // dataPeminjamToolStripMenuItem
             // 

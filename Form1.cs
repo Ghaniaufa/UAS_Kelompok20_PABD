@@ -29,5 +29,12 @@ namespace UAS_Kelompok20_PABD
             td.Show();
             this.Hide();
         }
+
+        private void kelompokFilmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kelompok_Film kfm = new Kelompok_Film();
+            kfm.Show();
+            this.Hide();
+        }
     }
 }
