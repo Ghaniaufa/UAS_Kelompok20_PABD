@@ -36,5 +36,17 @@ namespace UAS_Kelompok20_PABD
             kfm.Show();
             this.Hide();
         }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataPeminjamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data_Peminjam dp = new Data_Peminjam();
+            dp.Show();  
+            this.Hide();
+        }
     }
 }

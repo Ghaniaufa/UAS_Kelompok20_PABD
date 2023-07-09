@@ -19,7 +19,7 @@ namespace UAS_Kelompok20_PABD
 {
     public partial class Data_Peminjam : Form
     {
-        private string stringConnection = "Data Source=GHANIAUFA\\GHANAUFA;Initial Catalog=TokoDVDFilm;User ID=sa;Password=Anjingan20";
+        private string stringConnection = "Data Source=GHANIAUFA;Initial Catalog=TokoDVDFilm;Persist Security Info=True;User ID=sa;Password=Anjingan20";
         private SqlConnection koneksi;
         private void refreshform()
         {
@@ -120,7 +120,7 @@ namespace UAS_Kelompok20_PABD
                 string str = "insert into dbo.Peminjam (no_peminjam,nama_peminjam,jalan_peminjam,kota_peminjam,provinsi_peminjam)" + "values(@no_peminjam,@nama_peminjam,@jalan_peminjam,@kota_peminjam,@provinsi_peminjam)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("id_peminjam", noPeminjam));
+                cmd.Parameters.Add(new SqlParameter("no_peminjam", noPeminjam));
                 cmd.Parameters.Add(new SqlParameter("nama_peminjam", nmPeminjam));
                 cmd.Parameters.Add(new SqlParameter("jalan_peminjam", jlPeminjam));
                 cmd.Parameters.Add(new SqlParameter("kota_peminjam", ktPeminjam));
@@ -138,6 +138,11 @@ namespace UAS_Kelompok20_PABD
             Form1 fu = new Form1();
             fu.Show();
             this.Hide();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            refreshform();
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataFilmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kelompokFilmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataPeminjamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,6 +38,7 @@
             this.dataTransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataPemrosesanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataPegawaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,22 +52,17 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripDropDownButton1
+            // label1
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataFilmToolStripMenuItem,
-            this.kelompokFilmToolStripMenuItem,
-            this.dataPeminjamToolStripMenuItem,
-            this.dataMemberToolStripMenuItem,
-            this.dataTransaksiToolStripMenuItem,
-            this.dataPemrosesanToolStripMenuItem,
-            this.dataPegawaiToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.MediumOrchid;
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(233, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(307, 44);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "RENTALDVD FILM";
             // 
             // dataFilmToolStripMenuItem
             // 
@@ -87,6 +83,7 @@
             this.dataPeminjamToolStripMenuItem.Name = "dataPeminjamToolStripMenuItem";
             this.dataPeminjamToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dataPeminjamToolStripMenuItem.Text = "Data Peminjam";
+            this.dataPeminjamToolStripMenuItem.Click += new System.EventHandler(this.dataPeminjamToolStripMenuItem_Click);
             // 
             // dataMemberToolStripMenuItem
             // 
@@ -112,14 +109,34 @@
             this.dataPegawaiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dataPegawaiToolStripMenuItem.Text = "Data Pegawai";
             // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dataFilmToolStripMenuItem,
+            this.kelompokFilmToolStripMenuItem,
+            this.dataPeminjamToolStripMenuItem,
+            this.dataMemberToolStripMenuItem,
+            this.dataTransaksiToolStripMenuItem,
+            this.dataPemrosesanToolStripMenuItem,
+            this.dataPegawaiToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(54, 22);
+            this.toolStripDropDownButton1.Text = "MENU";
+            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "RENTAL DVD";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -130,6 +147,7 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem dataFilmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kelompokFilmToolStripMenuItem;

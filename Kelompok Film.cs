@@ -127,5 +127,21 @@ namespace UAS_Kelompok20_PABD
                 }
             }
         }
+
+        private void tbxDelete_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            Form1 myForm1 = new Form1();
+            myForm1.Show();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
     }
 }
