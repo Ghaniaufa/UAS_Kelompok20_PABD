@@ -13,7 +13,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.WebRequestMethods;
 using System.Windows.Input;
-using System.Net.NetworkInformation;
 
 namespace UAS_Kelompok20_PABD
 {
@@ -24,27 +23,10 @@ namespace UAS_Kelompok20_PABD
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void dataFilmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void masukanDataToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Data_Peminjam dpm = new Data_Peminjam();
-            dpm.Show();
-            this.Hide();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void masukanDataFilmToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Kelompok_Film kfm = new Kelompok_Film();
-            kfm.Show();
+            Tambah_Data td = new Tambah_Data();
+            td.Show();
             this.Hide();
         }
     }
