@@ -39,7 +39,13 @@ namespace UAS_Kelompok20_PABD
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            tbxNombr.Enabled = true;
+            tbxNmMbr.Enabled = true;
+            tbxJlMbr.Enabled = true;
+            tbxKtMbr.Enabled = true;
+            tbxPMbr.Enabled = true;
+            btnSave.Enabled = true;
+            btnDelete.Enabled = true;
         }
     }
 }
