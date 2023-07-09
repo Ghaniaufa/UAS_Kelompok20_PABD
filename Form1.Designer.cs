@@ -45,10 +45,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("A-Space Demo", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(132, 187);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(541, 56);
+            this.label1.Size = new System.Drawing.Size(415, 55);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rental DVD FILM";
             // 
@@ -88,6 +88,7 @@
             this.masukanDataFilmToolStripMenuItem.Name = "masukanDataFilmToolStripMenuItem";
             this.masukanDataFilmToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.masukanDataFilmToolStripMenuItem.Text = "Masukan Data Film";
+            this.masukanDataFilmToolStripMenuItem.Click += new System.EventHandler(this.masukanDataFilmToolStripMenuItem_Click);
             // 
             // dataKelompokFilmToolStripMenuItem
             // 
@@ -123,6 +124,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
