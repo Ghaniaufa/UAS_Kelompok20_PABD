@@ -35,6 +35,19 @@ namespace UAS_Kelompok20_PABD
         public Data_Member()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
+            dataGridView();
+        }
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "select * from dbo.Member";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -46,6 +59,72 @@ namespace UAS_Kelompok20_PABD
             tbxPMbr.Enabled = true;
             btnSave.Enabled = true;
             btnDelete.Enabled = true;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string noMember = tbxNombr.Text;
+            string nmMember = tbxNmMbr.Text;
+            string jlMember = tbxJlMbr.Text;
+            string ktMember = tbxKtMbr.Text;
+            string prMember = tbxPMbr.Text;
+
+            if (noMember == "")
+            {
+                MessageBox.Show("Masukkan NO Member", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.Member (no_member,nama_member,jalan_member,kota_member,provinsi_member)" + "values(@no_member,@nama_member,@jalan_member,@kota_member,@provinsi_member)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("no_member", noMember));
+                cmd.Parameters.Add(new SqlParameter("nama_member", nmMember));
+                cmd.Parameters.Add(new SqlParameter("jalan_member", jlMember));
+                cmd.Parameters.Add(new SqlParameter("kota_member", ktMember));
+                cmd.Parameters.Add(new SqlParameter("provinsi_member", prMember));
+                cmd.ExecuteNonQuery();
+
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string str = "DELETE FROM Member WHERE no_member = @no_member";
+
+            using (SqlConnection conn = new SqlConnection(stringConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand(str, conn))
+                {
+                    cmd.Parameters.AddWithValue("@no_member", tbxDelete.Text);
+
+                    try
+                    {
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data Berhasil Dihapus");
+                        dataGridView();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                }
+            }
         }
     }
 }
