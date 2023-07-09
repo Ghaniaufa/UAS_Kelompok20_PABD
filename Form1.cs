@@ -48,5 +48,12 @@ namespace UAS_Kelompok20_PABD
             dp.Show();  
             this.Hide();
         }
+
+        private void dataMemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data_Member dm = new Data_Member();
+            dm.Show();
+            this.Hide();
+        }
     }
 }

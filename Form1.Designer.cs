@@ -90,6 +90,7 @@
             this.dataMemberToolStripMenuItem.Name = "dataMemberToolStripMenuItem";
             this.dataMemberToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dataMemberToolStripMenuItem.Text = "Data Member";
+            this.dataMemberToolStripMenuItem.Click += new System.EventHandler(this.dataMemberToolStripMenuItem_Click);
             // 
             // dataTransaksiToolStripMenuItem
             // 
