@@ -40,6 +40,16 @@ namespace UAS_Kelompok20_PABD
             refreshform();
             dataGridView();
         }
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "select * from dbo.Peminjam";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
 
         private void Data_Peminjam_Load(object sender, EventArgs e)
         {
