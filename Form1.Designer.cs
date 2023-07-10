@@ -103,6 +103,7 @@
             this.dataTransaksiToolStripMenuItem.Name = "dataTransaksiToolStripMenuItem";
             this.dataTransaksiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dataTransaksiToolStripMenuItem.Text = "Data Transaksi";
+            this.dataTransaksiToolStripMenuItem.Click += new System.EventHandler(this.dataTransaksiToolStripMenuItem_Click);
             // 
             // dataPemrosesanToolStripMenuItem
             // 

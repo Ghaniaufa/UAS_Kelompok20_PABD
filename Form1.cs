@@ -62,5 +62,12 @@ namespace UAS_Kelompok20_PABD
             dp.Show();
             this.Hide();
         }
+
+        private void dataTransaksiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data_Transaksi dt = new Data_Transaksi ();
+            dt.Show();
+            this.Hide();
+        }
     }
 }
