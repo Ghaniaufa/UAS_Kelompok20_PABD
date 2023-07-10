@@ -28,7 +28,6 @@ namespace UAS_Kelompok20_PABD
             tbxJlMbr.Enabled = false;
             tbxKtMbr.Enabled = false;
             tbxPMbr.Enabled = false;
-            btnClear.Enabled = false;
             btnSave.Enabled = false;
             btnDelete.Enabled = false;
         }

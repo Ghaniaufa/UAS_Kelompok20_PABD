@@ -141,5 +141,10 @@ namespace UAS_Kelompok20_PABD
             fu.Show();
             this.Close();
         }
+
+        private void tbxPP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
