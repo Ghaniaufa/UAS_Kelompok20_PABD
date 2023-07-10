@@ -218,6 +218,7 @@
             this.btnBack.Text = "Kembali";
             this.btnBack.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Data_Member
             // 

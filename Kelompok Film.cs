@@ -137,6 +137,7 @@ namespace UAS_Kelompok20_PABD
         {
             Form1 myForm1 = new Form1();
             myForm1.Show();
+            this.Close();
         }
 
         private void btnClear_Click(object sender, EventArgs e)

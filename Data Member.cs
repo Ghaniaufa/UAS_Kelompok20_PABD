@@ -126,5 +126,18 @@ namespace UAS_Kelompok20_PABD
                 }
             }
         }
+        private void Data_Peminjam_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form1 fu = new Form1();
+            fu.Show();
+            this.Hide();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form1 myForm1 = new Form1();
+            myForm1.Show();
+            this.Close();
+        }
     }
 }

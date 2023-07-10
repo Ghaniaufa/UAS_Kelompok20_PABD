@@ -55,5 +55,12 @@ namespace UAS_Kelompok20_PABD
             dm.Show();
             this.Hide();
         }
+
+        private void dataPegawaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data_Pegawai dp = new Data_Pegawai();
+            dp.Show();
+            this.Hide();
+        }
     }
 }
