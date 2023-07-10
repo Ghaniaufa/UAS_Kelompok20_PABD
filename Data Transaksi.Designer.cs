@@ -53,7 +53,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(582, 369);
+            this.label1.Location = new System.Drawing.Point(582, 453);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 0;
@@ -62,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(582, 410);
+            this.label2.Location = new System.Drawing.Point(582, 372);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 1;
@@ -71,7 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(582, 454);
+            this.label3.Location = new System.Drawing.Point(582, 408);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 2;
@@ -97,7 +97,7 @@
             // 
             // tbxNoT
             // 
-            this.tbxNoT.Location = new System.Drawing.Point(814, 362);
+            this.tbxNoT.Location = new System.Drawing.Point(814, 446);
             this.tbxNoT.Name = "tbxNoT";
             this.tbxNoT.Size = new System.Drawing.Size(200, 20);
             this.tbxNoT.TabIndex = 5;
@@ -191,7 +191,7 @@
             // cbxKf
             // 
             this.cbxKf.FormattingEnabled = true;
-            this.cbxKf.Location = new System.Drawing.Point(814, 402);
+            this.cbxKf.Location = new System.Drawing.Point(814, 364);
             this.cbxKf.Name = "cbxKf";
             this.cbxKf.Size = new System.Drawing.Size(200, 21);
             this.cbxKf.TabIndex = 19;
@@ -199,7 +199,7 @@
             // cbxNp
             // 
             this.cbxNp.FormattingEnabled = true;
-            this.cbxNp.Location = new System.Drawing.Point(814, 446);
+            this.cbxNp.Location = new System.Drawing.Point(814, 400);
             this.cbxNp.Name = "cbxNp";
             this.cbxNp.Size = new System.Drawing.Size(200, 21);
             this.cbxNp.TabIndex = 20;

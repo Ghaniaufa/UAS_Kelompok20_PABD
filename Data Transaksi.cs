@@ -89,9 +89,9 @@ namespace UAS_Kelompok20_PABD
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string noTransaksi = tbxNoT.Text;
             string KdFilm = cbxKf.Text;
             string noPeminjam = cbxNp.Text;
+            string noTransaksi = tbxNoT.Text;
             string Peminjaman = dtpP.Text;
             string Pengembalian = dtpPn.Text;
 
