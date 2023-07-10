@@ -64,6 +64,18 @@
     <Compile Include="Data Peminjam.Designer.cs">
       <DependentUpon>Data Peminjam.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data Pemrosesan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data Pemrosesan.Designer.cs">
+      <DependentUpon>Data Pemrosesan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data Transaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data Transaksi.Designer.cs">
+      <DependentUpon>Data Transaksi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +104,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data Peminjam.resx">
       <DependentUpon>Data Peminjam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data Pemrosesan.resx">
+      <DependentUpon>Data Pemrosesan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data Transaksi.resx">
+      <DependentUpon>Data Transaksi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
