@@ -65,6 +65,7 @@ namespace UAS_Kelompok20_PABD
         {
             Form1 myForm1 = new Form1();
             myForm1.Show();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -121,7 +122,8 @@ namespace UAS_Kelompok20_PABD
         {
             Form1 fu = new Form1();
             fu.Show();
-            this.Hide();
+            this.Close();
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

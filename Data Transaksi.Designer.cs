@@ -47,13 +47,15 @@
             this.cbxKf = new System.Windows.Forms.ComboBox();
             this.cbxNp = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbxTls = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(582, 453);
+            this.label1.Location = new System.Drawing.Point(582, 420);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 0;
@@ -62,7 +64,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(582, 372);
+            this.label2.Location = new System.Drawing.Point(582, 339);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 1;
@@ -71,7 +73,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(582, 408);
+            this.label3.Location = new System.Drawing.Point(582, 375);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 2;
@@ -80,7 +82,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(582, 495);
+            this.label4.Location = new System.Drawing.Point(582, 462);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 13);
             this.label4.TabIndex = 3;
@@ -89,7 +91,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(582, 535);
+            this.label5.Location = new System.Drawing.Point(582, 502);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 13);
             this.label5.TabIndex = 4;
@@ -97,28 +99,28 @@
             // 
             // tbxNoT
             // 
-            this.tbxNoT.Location = new System.Drawing.Point(814, 446);
+            this.tbxNoT.Location = new System.Drawing.Point(814, 413);
             this.tbxNoT.Name = "tbxNoT";
             this.tbxNoT.Size = new System.Drawing.Size(200, 20);
             this.tbxNoT.TabIndex = 5;
             // 
             // dtpP
             // 
-            this.dtpP.Location = new System.Drawing.Point(814, 495);
+            this.dtpP.Location = new System.Drawing.Point(814, 462);
             this.dtpP.Name = "dtpP";
             this.dtpP.Size = new System.Drawing.Size(200, 20);
             this.dtpP.TabIndex = 8;
             // 
             // dtpPn
             // 
-            this.dtpPn.Location = new System.Drawing.Point(814, 535);
+            this.dtpPn.Location = new System.Drawing.Point(814, 502);
             this.dtpPn.Name = "dtpPn";
             this.dtpPn.Size = new System.Drawing.Size(200, 20);
             this.dtpPn.TabIndex = 9;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(447, 600);
+            this.btnAdd.Location = new System.Drawing.Point(447, 629);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 10;
@@ -128,16 +130,17 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(584, 600);
+            this.btnSave.Location = new System.Drawing.Point(584, 629);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 11;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(713, 600);
+            this.btnClear.Location = new System.Drawing.Point(713, 629);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 12;
@@ -147,24 +150,26 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(839, 600);
+            this.btnDelete.Location = new System.Drawing.Point(839, 629);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Delete ";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tbxDelete
             // 
-            this.tbxDelete.Location = new System.Drawing.Point(939, 600);
+            this.tbxDelete.Location = new System.Drawing.Point(939, 629);
             this.tbxDelete.Name = "tbxDelete";
             this.tbxDelete.Size = new System.Drawing.Size(100, 20);
             this.tbxDelete.TabIndex = 14;
+            this.tbxDelete.TextChanged += new System.EventHandler(this.tbxDelete_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(930, 581);
+            this.label6.Location = new System.Drawing.Point(930, 610);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 13);
             this.label6.TabIndex = 15;
@@ -173,7 +178,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(683, 98);
+            this.dataGridView1.Location = new System.Drawing.Point(683, 76);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(356, 223);
             this.dataGridView1.TabIndex = 16;
@@ -181,17 +186,18 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(361, 637);
+            this.btnBack.Location = new System.Drawing.Point(361, 666);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 18;
             this.btnBack.Text = "Kembali";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // cbxKf
             // 
             this.cbxKf.FormattingEnabled = true;
-            this.cbxKf.Location = new System.Drawing.Point(814, 364);
+            this.cbxKf.Location = new System.Drawing.Point(814, 331);
             this.cbxKf.Name = "cbxKf";
             this.cbxKf.Size = new System.Drawing.Size(200, 21);
             this.cbxKf.TabIndex = 19;
@@ -199,7 +205,7 @@
             // cbxNp
             // 
             this.cbxNp.FormattingEnabled = true;
-            this.cbxNp.Location = new System.Drawing.Point(814, 400);
+            this.cbxNp.Location = new System.Drawing.Point(814, 367);
             this.cbxNp.Name = "cbxNp";
             this.cbxNp.Size = new System.Drawing.Size(200, 21);
             this.cbxNp.TabIndex = 20;
@@ -214,11 +220,30 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "Data Transaksi";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(584, 542);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(90, 13);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Total Lama Sewa";
+            // 
+            // tbxTls
+            // 
+            this.tbxTls.Location = new System.Drawing.Point(814, 542);
+            this.tbxTls.Name = "tbxTls";
+            this.tbxTls.Size = new System.Drawing.Size(200, 20);
+            this.tbxTls.TabIndex = 23;
+            this.tbxTls.TextChanged += new System.EventHandler(this.tbxTls_TextChanged);
+            // 
             // Data_Transaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1592, 690);
+            this.Controls.Add(this.tbxTls);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cbxNp);
             this.Controls.Add(this.cbxKf);
@@ -268,5 +293,7 @@
         private System.Windows.Forms.ComboBox cbxKf;
         private System.Windows.Forms.ComboBox cbxNp;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbxTls;
     }
 }

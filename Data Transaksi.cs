@@ -23,6 +23,7 @@ namespace UAS_Kelompok20_PABD
         private SqlConnection koneksi;
         private SqlCommand command;
         private SqlDataAdapter adapter;
+        private double total;
 
 
         public Data_Transaksi()
@@ -89,34 +90,7 @@ namespace UAS_Kelompok20_PABD
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string KdFilm = cbxKf.Text;
-            string noPeminjam = cbxNp.Text;
-            string noTransaksi = tbxNoT.Text;
-            string Peminjaman = dtpP.Text;
-            string Pengembalian = dtpPn.Text;
 
-            if (noTransaksi == "")
-            {
-                MessageBox.Show("Masukkan NO Transaksi", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                koneksi.Open();
-                string str = "INSERT INTO Transaksi (kode_film,no_peminjam,no_transaksi,tgl_pinjam,tgl_pengembalian)" + "values(@kode_film,@no_peminjam,@no_transaksi,@tgl_pinjam,@tgl_pengembalian)";
-                SqlCommand cmd = new SqlCommand(str, koneksi);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("kode_film", KdFilm));
-                cmd.Parameters.Add(new SqlParameter("no_peminjam", noPeminjam));
-                cmd.Parameters.Add(new SqlParameter("no_transaksi", noTransaksi));
-                cmd.Parameters.Add(new SqlParameter("tgl_pinjam", Peminjaman));
-                cmd.Parameters.Add(new SqlParameter("tgl_pengembalian", Pengembalian));
-                cmd.ExecuteNonQuery();
-
-                koneksi.Close();
-                MessageBox.Show("Transaksi Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dataGridView();
-                refreshform();
-            }
         }
         private void LoadPeminjamData()
         {
@@ -171,6 +145,106 @@ namespace UAS_Kelompok20_PABD
             {
                 koneksi.Close();
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form1 myForm1 = new Form1();
+            myForm1.Show();
+            this.Close();
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+            string KdFilm = cbxKf.Text;
+            string noPeminjam = cbxNp.Text;
+            string noTransaksi = tbxNoT.Text;
+            DateTime Peminjaman = dtpP.Value;
+            DateTime Pengembalian = dtpPn.Value;
+            string lamasewa = tbxTls.Text;
+            int harga =0;
+            
+
+            if (noTransaksi == "")
+            {
+                MessageBox.Show("Masukkan NO Transaksi", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                koneksi.Open();
+                string lms = "SELECT harga_sewa From dbo.Kelompok_film WHERE kode_film = @kf";
+                SqlCommand cms = new SqlCommand(lms, koneksi);
+                cms.CommandType = CommandType.Text;
+                cms.Parameters.Add(new SqlParameter("kf", KdFilm));
+                SqlDataReader rd = cms.ExecuteReader();
+                while (rd.Read())
+                {
+                    harga = int.Parse(rd["harga_sewa"].ToString());
+                }
+                rd.Close();
+                totalHarga(harga, lamasewa);
+                string str = "INSERT INTO Transaksi (kode_film,no_peminjam,no_transaksi,tgl_pinjam,tgl_pengembalian)" + "values(@kode_film,@no_peminjam,@no_transaksi,@tgl_pinjam,@tgl_pengembalian)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("kode_film", KdFilm));
+                cmd.Parameters.Add(new SqlParameter("no_peminjam", noPeminjam));
+                cmd.Parameters.Add(new SqlParameter("no_transaksi", noTransaksi));
+                cmd.Parameters.Add(new SqlParameter("tgl_pinjam", Peminjaman));
+                cmd.Parameters.Add(new SqlParameter("tgl_pengembalian", Pengembalian));
+                cmd.ExecuteNonQuery();
+
+                koneksi.Close();
+                MessageBox.Show("Transaksi Berhasil Disimpan"+"\nTotal harga =" +total, "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
+            }
+        }
+
+        private void tbxDelete_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string str = "DELETE FROM Transaksi WHERE no_transaksi = @no_transaksi";
+
+            using (SqlConnection conn = new SqlConnection(stringConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand(str, conn))
+                {
+                    cmd.Parameters.AddWithValue("@no_transaksi", tbxDelete.Text);
+
+                    try
+                    {
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data Berhasil Dihapus");
+                        dataGridView();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void tbxTls_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+        private double totalHarga(int harga, string ls)
+        {
+ 
+            int lm = int.Parse(ls);
+
+            total = (harga * lm);
+            return total;
         }
     }
 }
