@@ -41,6 +41,9 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
+            this.tbxDelete = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbxidp = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,6 +123,7 @@
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
@@ -140,6 +144,7 @@
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // dataGridView1
             // 
@@ -160,11 +165,37 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // tbxDelete
+            // 
+            this.tbxDelete.Location = new System.Drawing.Point(1008, 634);
+            this.tbxDelete.Name = "tbxDelete";
+            this.tbxDelete.Size = new System.Drawing.Size(100, 20);
+            this.tbxDelete.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(577, 354);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Id Pemrosesan";
+            // 
+            // tbxidp
+            // 
+            this.tbxidp.Location = new System.Drawing.Point(789, 347);
+            this.tbxidp.Name = "tbxidp";
+            this.tbxidp.Size = new System.Drawing.Size(100, 20);
+            this.tbxidp.TabIndex = 15;
+            // 
             // Data_Pemrosesan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1581, 689);
+            this.Controls.Add(this.tbxidp);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.tbxDelete);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnDelete);
@@ -202,5 +233,8 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.TextBox tbxDelete;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbxidp;
     }
 }

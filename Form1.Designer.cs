@@ -110,6 +110,7 @@
             this.dataPemrosesanToolStripMenuItem.Name = "dataPemrosesanToolStripMenuItem";
             this.dataPemrosesanToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dataPemrosesanToolStripMenuItem.Text = "Data Pemrosesan";
+            this.dataPemrosesanToolStripMenuItem.Click += new System.EventHandler(this.dataPemrosesanToolStripMenuItem_Click);
             // 
             // dataPegawaiToolStripMenuItem
             // 

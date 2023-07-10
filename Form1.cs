@@ -69,5 +69,12 @@ namespace UAS_Kelompok20_PABD
             dt.Show();
             this.Hide();
         }
+
+        private void dataPemrosesanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data_Pemrosesan dp = new Data_Pemrosesan(); 
+            dp.Show();
+            this.Hide();
+        }
     }
 }
