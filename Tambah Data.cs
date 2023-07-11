@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using static System.Net.WebRequestMethods;
 using System.Windows.Input;
 using System.Net.NetworkInformation;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace UAS_Kelompok20_PABD
 {
@@ -29,7 +30,7 @@ namespace UAS_Kelompok20_PABD
             tbxJdl.Enabled = false;
             tbxJdl.Enabled = false;
             btnSave.Enabled = false;
-            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
         }
         public Tambah_Data()
         {
@@ -66,43 +67,16 @@ namespace UAS_Kelompok20_PABD
             tbxJdl.Enabled = true;
             tbxKdfillm.Enabled = true;
             btnSave.Enabled = true;
-            btnDelete.Enabled = true;
+            btnUpdate.Enabled = true;
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            string str = "DELETE FROM DVDfilm WHERE kode_film = @kode_film";
 
-            using (SqlConnection conn = new SqlConnection(stringConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand(str, conn))
-                {
-                    cmd.Parameters.AddWithValue("kode_film", tbxDelete.Text);
-
-                    try
-                    {
-                        conn.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        MessageBox.Show("Data Berhasil Dihapus");
-                        dataGridView();
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("An error occurred: " + ex.Message);
-                    }
-                }
-            }
-        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             string Jdl = tbxJdl.Text;
             string kdFilm = tbxKdfillm.Text;
-           
+
 
             if (kdFilm == "")
             {
@@ -114,7 +88,7 @@ namespace UAS_Kelompok20_PABD
                 string str = "insert into dbo.DVDfilm (judul,kode_film)" + "values(@judul,@kode_film)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("judul" ,Jdl));
+                cmd.Parameters.Add(new SqlParameter("judul", Jdl));
                 cmd.Parameters.Add(new SqlParameter("kode_film", kdFilm));
                 cmd.ExecuteNonQuery();
 
@@ -135,5 +109,38 @@ namespace UAS_Kelompok20_PABD
         {
             refreshform();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string str = "UPDATE DVDFilm SET kode_film= @kode_film,judul= @judul WHERE kode_film=@kode_film";
+
+            using (SqlConnection conn = new SqlConnection(stringConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand(str, conn))
+                {
+                    cmd.Parameters.AddWithValue("@kode_film", tbxKdfillm.Text);
+                    cmd.Parameters.AddWithValue("@judul", tbxJdl.Text);
+
+
+                    try
+                    {
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data Berhasil di Updated");
+                        dataGridView();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                }
+
+            }
+        }
+
     }
 }

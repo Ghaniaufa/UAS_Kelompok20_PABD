@@ -38,10 +38,8 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.tbxDelete = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,41 +147,6 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.btnDelete.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnDelete.Location = new System.Drawing.Point(1002, 545);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(105, 37);
-            this.btnDelete.TabIndex = 10;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // tbxDelete
-            // 
-            this.tbxDelete.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.tbxDelete.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxDelete.ForeColor = System.Drawing.Color.IndianRed;
-            this.tbxDelete.Location = new System.Drawing.Point(865, 488);
-            this.tbxDelete.Name = "tbxDelete";
-            this.tbxDelete.Size = new System.Drawing.Size(242, 32);
-            this.tbxDelete.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.label4.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.IndianRed;
-            this.label4.Location = new System.Drawing.Point(591, 488);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(223, 25);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Delete By Kode Film";
-            // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.LightGoldenrodYellow;
@@ -198,16 +161,27 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.btnUpdate.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.IndianRed;
+            this.btnUpdate.Location = new System.Drawing.Point(1003, 545);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(104, 34);
+            this.btnUpdate.TabIndex = 14;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // Tambah_Data
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1597, 683);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.tbxDelete);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnClear);
@@ -237,9 +211,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.TextBox tbxDelete;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
