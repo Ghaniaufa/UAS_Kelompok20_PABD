@@ -34,7 +34,6 @@
             this.dataFilmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kelompokFilmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataPeminjamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataTransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataPemrosesanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataPegawaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +58,6 @@
             this.dataFilmToolStripMenuItem,
             this.kelompokFilmToolStripMenuItem,
             this.dataPeminjamToolStripMenuItem,
-            this.dataMemberToolStripMenuItem,
             this.dataTransaksiToolStripMenuItem,
             this.dataPemrosesanToolStripMenuItem,
             this.dataPegawaiToolStripMenuItem});
@@ -90,13 +88,6 @@
             this.dataPeminjamToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dataPeminjamToolStripMenuItem.Text = "Data Peminjam";
             this.dataPeminjamToolStripMenuItem.Click += new System.EventHandler(this.dataPeminjamToolStripMenuItem_Click);
-            // 
-            // dataMemberToolStripMenuItem
-            // 
-            this.dataMemberToolStripMenuItem.Name = "dataMemberToolStripMenuItem";
-            this.dataMemberToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dataMemberToolStripMenuItem.Text = "Data Member";
-            this.dataMemberToolStripMenuItem.Click += new System.EventHandler(this.dataMemberToolStripMenuItem_Click);
             // 
             // dataTransaksiToolStripMenuItem
             // 
@@ -156,7 +147,6 @@
         private System.Windows.Forms.ToolStripMenuItem dataFilmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kelompokFilmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataPeminjamToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataMemberToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataTransaksiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataPemrosesanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataPegawaiToolStripMenuItem;

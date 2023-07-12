@@ -53,11 +53,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Plum;
-            this.label1.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(23, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 22);
+            this.label1.Size = new System.Drawing.Size(96, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Jenis Film";
             // 
@@ -65,11 +65,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Plum;
-            this.label2.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Location = new System.Drawing.Point(23, 162);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 22);
+            this.label2.Size = new System.Drawing.Size(114, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Harga Sewa";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -78,11 +78,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Plum;
-            this.label3.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(23, 216);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 22);
+            this.label3.Size = new System.Drawing.Size(78, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "No Film";
             // 
@@ -90,18 +90,18 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Plum;
-            this.label4.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label4.Location = new System.Drawing.Point(23, 262);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 22);
+            this.label4.Size = new System.Drawing.Size(99, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "Kode Film";
             // 
             // tbxNofilm
             // 
             this.tbxNofilm.BackColor = System.Drawing.Color.Plum;
-            this.tbxNofilm.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxNofilm.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxNofilm.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.tbxNofilm.Location = new System.Drawing.Point(170, 213);
             this.tbxNofilm.Name = "tbxNofilm";
@@ -111,7 +111,7 @@
             // tbxHs
             // 
             this.tbxHs.BackColor = System.Drawing.Color.Plum;
-            this.tbxHs.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxHs.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxHs.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.tbxHs.Location = new System.Drawing.Point(170, 159);
             this.tbxHs.Name = "tbxHs";
@@ -121,7 +121,7 @@
             // tbxJenisfilm
             // 
             this.tbxJenisfilm.BackColor = System.Drawing.Color.Plum;
-            this.tbxJenisfilm.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxJenisfilm.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxJenisfilm.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.tbxJenisfilm.Location = new System.Drawing.Point(170, 111);
             this.tbxJenisfilm.Name = "tbxJenisfilm";
@@ -131,7 +131,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Plum;
-            this.btnAdd.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnAdd.Location = new System.Drawing.Point(26, 303);
             this.btnAdd.Name = "btnAdd";
@@ -144,7 +144,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.Plum;
-            this.btnSave.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnSave.Location = new System.Drawing.Point(150, 304);
             this.btnSave.Name = "btnSave";
@@ -157,7 +157,7 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.Plum;
-            this.btnClear.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnClear.Location = new System.Drawing.Point(276, 303);
             this.btnClear.Name = "btnClear";
@@ -182,7 +182,7 @@
             // tbxKodefilm
             // 
             this.tbxKodefilm.BackColor = System.Drawing.Color.Plum;
-            this.tbxKodefilm.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxKodefilm.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxKodefilm.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.tbxKodefilm.Location = new System.Drawing.Point(170, 262);
             this.tbxKodefilm.Name = "tbxKodefilm";
@@ -201,7 +201,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Plum;
-            this.btnDelete.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDelete.Location = new System.Drawing.Point(135, 413);
             this.btnDelete.Name = "btnDelete";
@@ -214,7 +214,7 @@
             // tbxDelete
             // 
             this.tbxDelete.BackColor = System.Drawing.Color.Plum;
-            this.tbxDelete.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxDelete.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.tbxDelete.Location = new System.Drawing.Point(125, 379);
             this.tbxDelete.Name = "tbxDelete";
@@ -226,11 +226,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Plum;
-            this.label6.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label6.Location = new System.Drawing.Point(89, 353);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(179, 22);
+            this.label6.Size = new System.Drawing.Size(164, 21);
             this.label6.TabIndex = 16;
             this.label6.Text = "Delete By NoFilm";
             // 
