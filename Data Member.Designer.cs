@@ -46,6 +46,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbxNpm = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,7 +105,7 @@
             this.tbxKtMbr.BackColor = System.Drawing.Color.HotPink;
             this.tbxKtMbr.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxKtMbr.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbxKtMbr.Location = new System.Drawing.Point(571, 316);
+            this.tbxKtMbr.Location = new System.Drawing.Point(571, 352);
             this.tbxKtMbr.Name = "tbxKtMbr";
             this.tbxKtMbr.Size = new System.Drawing.Size(106, 36);
             this.tbxKtMbr.TabIndex = 24;
@@ -113,7 +115,7 @@
             this.tbxJlMbr.BackColor = System.Drawing.Color.HotPink;
             this.tbxJlMbr.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxJlMbr.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbxJlMbr.Location = new System.Drawing.Point(416, 316);
+            this.tbxJlMbr.Location = new System.Drawing.Point(416, 352);
             this.tbxJlMbr.Name = "tbxJlMbr";
             this.tbxJlMbr.Size = new System.Drawing.Size(106, 36);
             this.tbxJlMbr.TabIndex = 23;
@@ -123,7 +125,7 @@
             this.tbxNmMbr.BackColor = System.Drawing.Color.HotPink;
             this.tbxNmMbr.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxNmMbr.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbxNmMbr.Location = new System.Drawing.Point(416, 258);
+            this.tbxNmMbr.Location = new System.Drawing.Point(416, 294);
             this.tbxNmMbr.Name = "tbxNmMbr";
             this.tbxNmMbr.Size = new System.Drawing.Size(422, 36);
             this.tbxNmMbr.TabIndex = 22;
@@ -133,7 +135,7 @@
             this.tbxNombr.BackColor = System.Drawing.Color.HotPink;
             this.tbxNombr.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxNombr.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbxNombr.Location = new System.Drawing.Point(416, 201);
+            this.tbxNombr.Location = new System.Drawing.Point(416, 237);
             this.tbxNombr.Name = "tbxNombr";
             this.tbxNombr.Size = new System.Drawing.Size(422, 36);
             this.tbxNombr.TabIndex = 21;
@@ -144,7 +146,7 @@
             this.label4.BackColor = System.Drawing.Color.HotPink;
             this.label4.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(57, 316);
+            this.label4.Location = new System.Drawing.Point(57, 352);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 29);
             this.label4.TabIndex = 18;
@@ -156,7 +158,7 @@
             this.label3.BackColor = System.Drawing.Color.HotPink;
             this.label3.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(57, 258);
+            this.label3.Location = new System.Drawing.Point(57, 294);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(193, 29);
             this.label3.TabIndex = 17;
@@ -168,7 +170,7 @@
             this.label2.BackColor = System.Drawing.Color.HotPink;
             this.label2.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(59, 201);
+            this.label2.Location = new System.Drawing.Point(59, 237);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 29);
             this.label2.TabIndex = 16;
@@ -204,7 +206,7 @@
             this.tbxDelete.BackColor = System.Drawing.Color.HotPink;
             this.tbxDelete.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxDelete.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tbxDelete.Location = new System.Drawing.Point(416, 423);
+            this.tbxDelete.Location = new System.Drawing.Point(416, 459);
             this.tbxDelete.Name = "tbxDelete";
             this.tbxDelete.Size = new System.Drawing.Size(422, 36);
             this.tbxDelete.TabIndex = 30;
@@ -224,7 +226,7 @@
             this.label7.BackColor = System.Drawing.Color.HotPink;
             this.label7.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label7.Location = new System.Drawing.Point(57, 430);
+            this.label7.Location = new System.Drawing.Point(57, 466);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(275, 29);
             this.label7.TabIndex = 32;
@@ -244,12 +246,37 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.HotPink;
+            this.label5.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label5.Location = new System.Drawing.Point(57, 172);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(175, 29);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "No Peminjam";
+            // 
+            // tbxNpm
+            // 
+            this.tbxNpm.BackColor = System.Drawing.Color.HotPink;
+            this.tbxNpm.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxNpm.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.tbxNpm.Location = new System.Drawing.Point(416, 172);
+            this.tbxNpm.Name = "tbxNpm";
+            this.tbxNpm.Size = new System.Drawing.Size(422, 36);
+            this.tbxNpm.TabIndex = 35;
+            this.tbxNpm.TextChanged += new System.EventHandler(this.tbxNpm_TextChanged);
+            // 
             // Data_Member
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1590, 678);
+            this.Controls.Add(this.tbxNpm);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dataGridView1);
@@ -294,5 +321,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbxNpm;
     }
 }

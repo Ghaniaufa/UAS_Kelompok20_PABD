@@ -23,6 +23,8 @@ namespace UAS_Kelompok20_PABD
             tbxJlMbr.Text = "";
             tbxKtMbr.Text = "";
             tbxPMbr.Text = "";
+            tbxNpm.Text = "";
+            tbxNpm.Enabled = false;
             tbxNombr.Enabled = false;
             tbxNmMbr.Enabled = false;
             tbxJlMbr.Enabled = false;
@@ -56,17 +58,20 @@ namespace UAS_Kelompok20_PABD
             tbxJlMbr.Enabled = true;
             tbxKtMbr.Enabled = true;
             tbxPMbr.Enabled = true;
+            tbxNpm.Enabled = true;
             btnSave.Enabled = true;
             btnDelete.Enabled = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string noPeminjam = tbxNombr.Text;
             string noMember = tbxNombr.Text;
             string nmMember = tbxNmMbr.Text;
             string jlMember = tbxJlMbr.Text;
             string ktMember = tbxKtMbr.Text;
             string prMember = tbxPMbr.Text;
+            
 
             if (noMember == "")
             {
@@ -75,9 +80,10 @@ namespace UAS_Kelompok20_PABD
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.Member (no_member,nama_member,jalan_member,kota_member,provinsi_member)" + "values(@no_member,@nama_member,@jalan_member,@kota_member,@provinsi_member)";
+                string str = "insert into dbo.Member (no_peminjam,no_member,nama_member,jalan_member,kota_member,provinsi_member)" + "values(@no_peminjam,@no_member,@nama_member,@jalan_member,@kota_member,@provinsi_member)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("no_peminjam", noPeminjam));
                 cmd.Parameters.Add(new SqlParameter("no_member", noMember));
                 cmd.Parameters.Add(new SqlParameter("nama_member", nmMember));
                 cmd.Parameters.Add(new SqlParameter("jalan_member", jlMember));
@@ -137,6 +143,11 @@ namespace UAS_Kelompok20_PABD
             Form1 myForm1 = new Form1();
             myForm1.Show();
             this.Close();
+        }
+
+        private void tbxNpm_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
